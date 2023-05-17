@@ -1,0 +1,160 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header */
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 30%;
+  padding: 20px;
+  background-color: #c41f27;
+}
+
+.header > div > img {
+  width: 100%;
+}
+
+.header > ul > li {
+  margin: 10px;
+}
+
+.header > ul > li > a {
+  color: white;
+  font-size: 22px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #c41f27;
+  font-size: 22px;
+}
+
+.section {
+  padding: 20px;
+}
+
+.item>h1{
+    margin-bottom: 22px;
+}
+
+/* Стили для шапки */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+}
+
+nav ul li a {
+  padding-right: 10px;
+  color: white;
+}
+
+nav ul li a:hover {
+  color: white;
+  padding: 1em;
+  background-color: #d91d27;
+}
+
+
+/* Стили для героя */
+
+#hero > img {
+  max-width: 100%;
+}
+
+/* Стили для кнопки */
+
+.btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Стили для раздела "О кафедре" */
+
+#about {
+  background-color: #f9f9f9;
+  padding: 50px;
+}
+.container img {
+  width: 20%;
+}
+
+/* Стили для раздела "Сотрудники" */
+
+#staff {
+  padding: 50px;
+}
+
+#staff li {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  margin: 20px;
+}
+
+#staff img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* Стили для раздела "Учебные программы" */
+
+#programs {
+  background-color: #f9f9f9;
+  padding: 50px;
+}
+
+/* Стили для раздела "Наука и исследования" */
+
+#research {
+  padding: 50px;
+}
+
+/* Стили для подвала */
+
+#footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}

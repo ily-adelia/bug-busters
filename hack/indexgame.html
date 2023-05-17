@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Викторина по IT</title>
+  <link rel="stylesheet" href="./static/css/indexgame.css">
+</head>
+<body>
+
+  <div class="conta">
+  <div class="header">
+    <div>
+      <img
+        src="https://muk.iuk.kg/wp-content/uploads/2021/11/Logo-TSentralnyj-Kampus-2.png"
+        alt=""
+      />
+    </div>
+    
+    <ul>
+      <li><a href="main.html">Тур по кафедре</a></li>
+      <li><a href="indexgame.html">Игра</a></li>
+      <li><a href="index.html #footer">Контакты</a></li>
+    </ul>
+  </div>
+
+  <div class="text-page">
+    <div class="nav-container">
+      <nav>
+        <ul>
+          <li><a href="index.html">О кафедре</a></li>
+          <li>
+            <a href="index.html #staff">Профессорско-преподавательский состав</a>
+          </li>
+          <li><a href=" index.html #programs">Абитуриентам</a></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="https://instagram.com/kafedra_kisiu?igshid=MzRlODBiNWFlZA=="
+              ><i class="icon-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="tel:+996700580308"><i class="icon-phone"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  <div class="container">
+    <h1>Викторина по IT</h1>
+    <form id="quizForm">
+      <div class="form-group">
+        <h3>1. Что означает аббревиатура HTML?</h3>
+        <label>
+          <input type="radio" name="question1" value="a"> a  Hyper Text Markup Language
+        </label>
+        <label>
+          <input type="radio" name="question1" value="b"> b Hyperlinks and Text Markup Language
+        </label>
+        <label>
+          <input type="radio" name="question1" value="c"> c  Home Tool Markup Language
+        </label>
+      </div>
+      <div class="form-group">
+        <h3>2. Какая из перечисленных технологий является языком программирования?</h3>
+        <label>
+          <input type="radio" name="question2" value="a"> a  Java
+        </label>
+        <label>
+          <input type="radio" name="question2" value="b"> b  MySQL
+        </label>
+        <label>
+          <input type="radio" name="question2" value="c"> c  CSS
+        </label>
+      </div>
+      <div class="form-group">
+        <h3>3. Что такое CSS?</h3>
+        <label>
+          <input type="radio" name="question3" value="a"> a  Cascading Style Sheets
+        </label>
+        <label>
+          <input type="radio" name="question3" value="b"> b  Computer Science System
+        </label>
+        <label>
+          <input type="radio" name="question3" value="c"> c Creative Style Syntax
+        </label>
+      </div>
+      <div class="form-group">
+        <h3>4. Какая из перечисленных технологий используется для разработки динамических веб-страниц?</h3>
+        <label>
+          <input type="radio" name="question4" value="a"> a JavaScript
+        </label>
+        <label>
+          <input type="radio" name="question4" value="b"> b SQL
+        </label>
+        <label>
+          <input type="radio" name="question4" value="c"> c HTML
+        </label>
+      </div>
+      <div class="form-group">
+        <h3>5. Что такое API?</h3>
+        <label>
+          <input type="radio" name="question5" value="a"> a Application Programming Interface
+        </label>
+        <label>
+          <input type="radio" name="question5" value="b"> b Advanced Programming Interface
+        </label>
+        <label>
+          <input type="radio" name="question5" value="c"> c Automated Programming Interface
+        </label>
+      </div>
+      <button type="submit">Отправить</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  </div>
+
+    
+  <script>
+    // Обработка отправки формы
+    const form = document.getElementById('quizForm');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Получение ответов
+      const answers = {
+        question1: document.querySelector('input[name="question1"]:checked').value,
+        question2: document.querySelector('input[name="question2"]:checked').value,
+        question3: document.querySelector('input[name="question3"]:checked').value,
+        question4: document.querySelector('input[name="question4"]:checked').value,
+        question5: document.querySelector('input[name="question5"]:checked').value
+      };
+
+      // Подсчет правильных ответов
+      let correctAnswers = 0;
+      if (answers.question1 === 'a') correctAnswers++;
+      if (answers.question2 === 'a') correctAnswers++;
+      if (answers.question3 === 'a') correctAnswers++;
+      if (answers.question4 === 'a') correctAnswers++;
+      if (answers.question5 === 'a') correctAnswers++;
+
+      // Отображение результата
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = `<h2>Результат:</h2>
+                             <p>Правильных ответов: ${correctAnswers}/5</p>`;
+      if (correctAnswers === 5) {
+        resultDiv.innerHTML += '<p class="badge">Получен бейдж "Мастер IT"</p>';
+      } else if (correctAnswers >= 3) {
+        resultDiv.innerHTML += '<p class="badge">Получен бейдж "Эксперт IT"</p>';
+      } else {
+        resultDiv.innerHTML += '<p>Попробуйте еще раз!</p>';
+      }
+
+      // Очистка формы после отправки
+      form.reset();
+    });
+  </script>
+</body>
+</html>    

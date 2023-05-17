@@ -1,0 +1,148 @@
+ * {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* header */
+
+.page {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  width: 10%;
+  padding: 20px;
+  background-color: #c41f27;
+}
+
+.header > div > img {
+  width: 100%;
+}
+
+.header > ul > li {
+  margin: 10px;
+}
+
+.header > ul > li > a {
+  color: white;
+  font-size: 22px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: #c41f27;
+  font-size: 22px;
+}
+
+.section {
+  padding: 20px;
+}
+
+.item>h1{
+    margin-bottom: 22px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+}
+
+nav ul li a {
+  padding-right: 10px;
+  color: white;
+}
+
+nav ul li a:hover {
+  padding: 1em;
+  background-color: #d91d27;
+}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    
+    .container {
+     
+      margin: 0 auto;
+      padding: 60px 40px 40px 270px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .container>h1{
+        text-align: left;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #c41f27;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #c41f27;
+    }
+    
+    .badge {
+      background-color: #c41f27;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+    .conta{
+      display: flex;
+    }
